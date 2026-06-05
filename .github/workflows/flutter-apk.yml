@@ -29,3 +29,11 @@ jobs:
         with:
           name: app-release
           path: build/app/outputs/flutter-apk/app-release.apk
+
+      - name: Flutter Doctor
+        run: flutter doctor -v
+
+      - name: Print Android Config
+        run: |
+          cat android/app/build.gradle.kts
+          cat android/settings.gradle.kts
